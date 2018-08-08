@@ -88,6 +88,7 @@ export default {
 
     &__checkbox {
       width: 40px;
+      max-height: 20px;
       cursor: pointer;
     }
 
