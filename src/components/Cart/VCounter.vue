@@ -4,7 +4,7 @@
       <div class="modal__title">Изменить количество</div>
       <div class="counter">
         <div class="product__price">{{ product.price + ' Р' }}</div>
-        <button class="counter__button counter__button_decrease" @click="curAmount--">-</button>
+        <button class="counter__button counter__button_decrease" @click="decrease">-</button>
         <input type="number" class="product__amount" v-model="curAmount">
         <button class="counter__button counter__button_increase" @click="curAmount++">+</button>
         <div class="product__price_total">{{ product.price * curAmount + ' Р' }}</div>
@@ -47,6 +47,9 @@ export default {
     confirm() {
       this.$emit('changeAmount', this.curAmount);
       this.$emit('closeModal');
+    },
+    decrease() {
+      if (this.curAmount) this.curAmount -= 1;
     },
   },
   watch: {
@@ -96,13 +99,14 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: #fff;
         color: #fff;
         width: 15px;
         height: 15px;
         background-color: rgba(29, 130, 221, 0.5);
         border: none;
         outline: none;
-        line-height: 1px;
+        line-height: 15px;
         cursor: pointer;
 
         &:hover {

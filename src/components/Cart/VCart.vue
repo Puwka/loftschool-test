@@ -27,7 +27,7 @@
         </div>
       </div>
     </div>
-    <div class="total">Итого: {{ total }}</div>
+    <div class="total">Итого: {{ total }} Р</div>
   </div>
 </template>
 
