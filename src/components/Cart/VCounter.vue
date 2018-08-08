@@ -4,8 +4,9 @@
       <div class="modal__title">Изменить количество</div>
       <div class="counter">
         <div class="product__price">{{ product.price + ' Р' }}</div>
-        <button class="counter__button counter__button_decrease" @click="decrease">-</button>
-        <input type="number" class="product__amount" v-model="curAmount">
+        <button
+          class="counter__button counter__button_decrease" @click="decrease">-</button>
+        <input type="number" class="product__amount" @input="validate" v-model="curAmount">
         <button class="counter__button counter__button_increase" @click="curAmount++">+</button>
         <div class="product__price_total">{{ product.price * curAmount + ' Р' }}</div>
       </div>
@@ -50,6 +51,12 @@ export default {
     },
     decrease() {
       if (this.curAmount) this.curAmount -= 1;
+    },
+    validate(v) {
+      // kinda stupid validation
+      if (Number.isNaN(Number(v.data))) {
+        this.curAmount = 1;
+      }
     },
   },
   watch: {
