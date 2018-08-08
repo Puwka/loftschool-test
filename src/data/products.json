@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "name": "Нож складной WENGER Evolution, Автобус, 13 Функций, 85 мм. WEGNER",
+    "image": "static/img/Logo.png",
+    "price": "990"
+  },
+  {
+    "id": "2",
+    "name": "Рюкзак WEGNER NEO",
+    "image": "static/img/Logo.png",
+    "price": "5500"
+  },
+  {
+    "id": "3",
+    "name": "Перьевая ручка Wateman Hemisphere Essential, перо: нержавеющая сталь. WATERMAN",
+    "image": "static/img/Logo.png",
+    "price": "2000"
+  }
+]
